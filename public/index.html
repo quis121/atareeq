@@ -1,88 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>عالطريق – رحلتك تبدأ هنا</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <div class="logo">
-      <img src="https://i.ibb.co/y1BMpfC/Versatile-Circular-Logo-for-Ride-Hailing-App.png" alt="عالطريق" />
-      <span>عالطريق</span>
-    </div>
-    <nav>
-      <a href="#features" data-key="navFeatures">المميزات</a>
-      <a href="#how-it-works" data-key="navHow">كيف يعمل</a>
-      <a href="#pricing" data-key="navPricing">الأسعار</a>
-      <a href="#contact" data-key="navContact">اتصل بنا</a>
-    </nav>
-    <div class="lang-switch">
-      <button onclick="switchLang('ar')">عربي</button>
-      <button onclick="switchLang('en')">English</button>
-      <button onclick="switchLang('he')">עִברִית</button>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <h1 data-key="heading">رحلتك تبدأ هنا</h1>
-      <p data-key="subtext">طلب تاكسي خاص بسهولة وسرعة مع عالطريق.</p>
-      <div class="btn-group">
-        <button class="btn btn-primary" data-key="btnRequest" onclick="openModal()">اطلب الآن</button>
-        <button id="login-btn" class="btn btn-secondary" data-key="btnLogin" onclick="openLoginModal()">تسجيل / دخول</button>
-      </div>
-    </section>
-    <section id="features">
-      <h2 data-key="featuresTitle">لماذا تختار عالطريق؟</h2>
-      <p data-key="featuresSub">نقدم لك أفضل تجربة حجز سيارات خاصة</p>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">🚕</div>
-          <h3 data-key="feature1Title">حجز سريع</h3>
-          <p data-key="feature1Text">احجز رحلتك في أقل من دقيقة</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">📱</div>
-          <h3 data-key="feature4Title">تتبع مباشر</h3>
-          <p data-key="feature4Text">تتبع موقع سيارتك</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <span data-key="footer">© 2025 عالطريق. جميع الحقوق محفوظة.</span>
-  </footer>
-
-  <div id="booking-modal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <h2 data-key="bookRide">حجز رحلة</h2>
-      <form id="booking-form">
-        <div class="form-group">
-          <label data-key="formPickup">نقطة الانطلاق</label>
-          <input type="text" required />
-        </div>
-        <div class="form-group">
-          <label data-key="formDestination">الوجهة</label>
-          <input type="text" required />
-        </div>
-        <div class="form-group">
-          <label data-key="formRideType">نوع الرحلة</label>
-          <select required>
-            <option value="" disabled selected data-key="formSelectOption">اختر نوع الرحلة</option>
-            <option value="standard" data-key="formStandard">عادي</option>
-            <option value="premium" data-key="formPremium">مميز</option>
-            <option value="group" data-key="formGroup">مجموعة</option>
-          </select>
-        </div>
-        <button type="submit" class="btn btn-primary form-submit" data-key="formSubmit">تأكيد الحجز</button>
-      </form>
-    </div>
-  </div>
-
-  <script src="app.js"></script>
-</body>
-</html>
